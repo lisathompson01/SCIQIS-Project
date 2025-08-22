@@ -1,6 +1,6 @@
 Quantum Teleportation Project
 
-This repository contains two Jupyter notebooks that implement and test quantum teleportation using Qiskit. Each project builds on the previous one, moving from the basic teleportation protocol to more advanced verification with fidelity calculations and noisy channels.
+This repository contains onw Jupyter notebook that implements and tests quantum teleportation using Qiskit. Each project builds on the previous one, moving from the basic teleportation protocol to more advanced verification with fidelity calculations and noisy channels.
 
 Project 1 – Ideal Teleportation Protocol
 File: Project 1.ipynb
