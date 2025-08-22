@@ -8,7 +8,7 @@ File: Project 1.ipynb
 This notebook implements the standard qubit teleportation circuit step by step:
 
 1. Input State Preparation
-   Arbitrary qubit states (e.g. |0>, |1>, |+>, |−>, |i+>, |i−>) are prepared for teleportation.
+   Arbitrary quantum states are prepared for teleportation.
 
 2. Entanglement Generation
    Alice and Bob share a Bell pair.
@@ -53,7 +53,7 @@ Running the Notebooks
 1. Activate your environment (for example, teleportation).
 2. Launch Jupyter Lab:
    jupyter lab
-3. Open Project 1.ipynb or Project 2.ipynb and run the cells sequentially.
+3. Open main.iPynb and run the cells sequentially.
 
 What You Will Learn
 - How quantum teleportation works in theory.
