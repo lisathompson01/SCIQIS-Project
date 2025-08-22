@@ -35,7 +35,8 @@ Since this was a one-week project, there were several aspects I didn’t have ti
 In particular, I would like to:  
 - Combine multiple noise sources (gate errors, decoherence, and measurement errors) to study their joint effect on fidelity.  
 - Run the teleportation circuit on real IBM Quantum hardware via IBM Lab for comparison with simulation results.  
-- Extend the study to continuous-variable quantum teleportation, which opens interesting connections to quantum optics.  
+- Extend the study to continuous-variable quantum teleportation, which opens interesting connections to quantum optics.
+- Refactor the notebook by moving many of the function definitions into separate Python files within the repository, making the notebook shorter, cleaner, and more modular.  
 ---
 
 ## Requirements
