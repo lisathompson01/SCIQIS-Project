@@ -1,62 +1,85 @@
-Quantum Teleportation Project
+# Quantum State Teleportation with Noise Models
 
-This repository contains onw Jupyter notebook that implements and tests quantum teleportation using Qiskit. Each project builds on the previous one, moving from the basic teleportation protocol to more advanced verification with fidelity calculations and noisy channels.
+This repository contains a Jupyter Notebook that demonstrates **quantum state teleportation** using [Qiskit](https://qiskit.org/), and investigates how different types of **noise** affect the fidelity of teleportation.
 
-Project 1 – Ideal Teleportation Protocol
-File: Project 1.ipynb
+The notebook is designed to be **educational**: it walks through the ideal teleportation protocol step by step, then introduces realistic noise models to show how experimental imperfections degrade performance.
 
-This notebook implements the standard qubit teleportation circuit step by step:
+---
 
-1. Input State Preparation
-   Arbitrary quantum states are prepared for teleportation.
+## Features
 
-2. Entanglement Generation
-   Alice and Bob share a Bell pair.
+- **Teleportation protocol**
+  - Build the full circuit from scratch with clear markdown explanations.
+  - Verify correctness on random input states.
+  - Compute fidelity between input and output states.
 
-3. Bell Measurement
-   Alice performs a CNOT and Hadamard gate, followed by measurement in the Bell basis.
+- **Noise models tested**
+  1. **Gate errors (depolarizing noise)** – random Pauli errors applied during gate operations.
+  2. **Decoherence (T₁/T₂ relaxation/dephasing)** – loss of quantum information over time.
+  3. **Measurement imperfections (readout errors)** – bit flips during classical readout that affect Bob’s correction step.
 
-4. Classical Feed-Forward
-   Depending on Alice’s measurement outcomes, Bob applies Pauli-X or Pauli-Z corrections to recover the input state.
+- **Visualizations**
+  - Probability histograms for intuition.
+  - Fidelity sweeps across error parameters.
+  - Line plots and heatmaps to explore parameter ranges.
 
-5. Verification
-   The circuit is simulated, and measurement results confirm successful teleportation in the ideal (noise-free) case.
+- **Conclusions**
+  - Gate errors and decoherence both lower fidelity, with **two-qubit gates** contributing most strongly.
+  - Readout errors directly affect Bob’s correction step and are especially harmful to teleportation success.
+  - Fidelity (not probability counts) is the correct figure of merit for assessing teleportation success.
 
-Project 2 – Fidelity and Noise Analysis
-File: Project 2.ipynb
+---
 
-This notebook extends Project 1 by adding state verification and noise effects:
+## Requirements
 
-1. Fidelity Function
-   Implements a custom fidelity function F(rho_in, rho_out) to compare the input state with Bob’s output state.
+The notebook was developed with the following versions:
 
-2. Random States on the Bloch Sphere
-   Tests teleportation on a variety of random qubit states to evaluate protocol performance beyond fixed basis states.
+- **Python**: 3.12.7 (Anaconda, Clang 14.0.6)
+- **Qiskit Terra**: 2.1.1
+- **Qiskit Aer**: 0.17.1
+- **Matplotlib**: 3.10.5
 
-3. Noisy Channels
-   Introduces realistic noise models (depolarizing, amplitude damping, measurement errors) using Qiskit’s AerSimulator.
-   Demonstrates how noise reduces teleportation fidelity.
+To install the dependencies in a fresh environment:
 
-4. Results and Analysis
-   Fidelity values and measurement statistics are displayed in tables for comparison between the ideal and noisy cases.
+```bash
+pip install qiskit qiskit-aer matplotlib pylatexenc
+```
 
-Requirements
-- Python 3.12
-- Qiskit Terra 2.1+
-- Jupyter Lab or Notebook
-- Pandas (for result tables)
+---
 
-Install dependencies inside your environment:
-pip install qiskit pandas
+## Usage
 
-Running the Notebooks
-1. Activate your environment (for example, teleportation).
-2. Launch Jupyter Lab:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/<repo-name>.git
+   cd <repo-name>
+   ```
+
+2. Launch Jupyter Lab or Notebook:
+   ```bash
    jupyter lab
-3. Open main.iPynb and run the cells sequentially.
+   ```
+   Open `Main.ipynb`.
 
-What You Will Learn
-- How quantum teleportation works in theory.
-- How to implement teleportation in Qiskit.
-- How to test correctness using fidelity.
-- How noise affects quantum information transfer.
+3. Run cells in order. Each section contains **markdown explanations** before the code to guide you.
+
+---
+
+## Repository Structure
+
+```
+├── Main.ipynb        # Full teleportation notebook with noise models
+├── README.md         # This file
+```
+
+---
+
+## Learning Outcomes
+
+By working through the notebook, you will:
+
+- Understand the **quantum teleportation protocol** step by step.
+- See how **ideal teleportation** achieves fidelity ≈ 1 for any input state.
+- Learn how to **simulate realistic noise models** in Qiskit Aer.
+- Quantify the effect of different noise sources using **state fidelity**.
+- Interpret **visualizations** of how errors degrade teleportation performance.
