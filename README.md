@@ -77,7 +77,7 @@ pip install qiskit qiskit-aer matplotlib pylatexenc
 ## Repository Structure
 
 ```
-├── Main.ipynb        # Full teleportation notebook with noise models
+├── Explanatory Notebook.ipynb        # Full teleportation notebook with noise models
 ├── README.md         # This file
 ```
 
