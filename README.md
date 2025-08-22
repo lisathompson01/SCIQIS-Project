@@ -29,6 +29,14 @@ The notebook is designed to be **educational**: it walks through the ideal telep
   - Fidelity (not probability counts) is the correct figure of merit for assessing teleportation success.
 
 ---
+## Future Work
+
+Since this was a one-week project, there were several aspects I didn’t have time to explore fully.  
+In particular, I would like to:  
+- Combine multiple noise sources (gate errors, decoherence, and measurement errors) to study their joint effect on fidelity.  
+- Run the teleportation circuit on real IBM Quantum hardware via IBM Lab for comparison with simulation results.  
+- Extend the study to continuous-variable quantum teleportation, which opens interesting connections to quantum optics.  
+---
 
 ## Requirements
 
